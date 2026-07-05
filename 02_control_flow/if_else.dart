@@ -53,6 +53,21 @@ void main() {
     print("Improvement is needed");
   }
 
+  // Nested if-else-if
+
+  var profession = "Student";
+  var scholarship = true;
+
+  if(profession == "Student"){
+    if(scholarship){
+      print("Discount is 20%.");
+    } else{
+      print("Discount is 10%");
+    }
+  } else{
+    print("I'm sorry there is no discount for you.");
+  }
+
   // ===========================================================================
   // 4. Ternary Operator (? :)
   // A shorthand for simple if-else statements.
@@ -67,6 +82,14 @@ void main() {
   userName == "STyLers"
       ? print("Welcome Admin!")
       : print("Access Denied!");
+
+  var amount = -500;
+
+  var isValid = (amount > 0) ? "Amount ready for cashout."
+      : (amount < 0)
+        ? "Amount can not be below 0."
+        : "Amount is 0.";
+  print(isValid);
 
   // ===========================================================================
   // Null-Coalescing Operator (??)
@@ -118,4 +141,34 @@ void main() {
     default:
       print("Invalid Input");
   }
+
+  String category = "Electronics";
+  String product = "Laptop";
+
+  switch (category) {
+    case "Electronics":
+      print("Electronics selected.");
+
+      switch (product) {
+        case "Laptop":
+          print("You chose a Laptop.");
+          break;
+
+        case "Phone":
+          print("You chose a Phone.");
+          break;
+
+        default:
+          print("Unknown electronic product.");
+      }
+      break;
+
+    case "Clothing":
+      print("Clothing selected.");
+      break;
+
+    default:
+      print("Unknown category.");
+  }
 }
+

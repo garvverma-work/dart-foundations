@@ -25,6 +25,52 @@ void main() {
     print(i);
   }
 
+  // Nested for loop (Pattern 1)
+
+  for (int i = 0; i < 5; i++) {
+    String row = "";
+
+    // Left stars
+    for (int j = 0; j < 5 - i; j++) {
+      row += "*";
+    }
+
+    // Spaces
+    for (int j = 0; j < i * 2; j++) {
+      row += " ";
+    }
+
+    // Right stars
+    for (int j = 0; j < 5 - i; j++) {
+      row += "*";
+    }
+
+    print(row);
+  }
+
+  // Nested for loop (Pattern 2)
+
+  for (int i = 0; i < 5; i++) {
+    String row = "";
+
+    // Left stars
+    for (int j = 0; j < i + 1; j++) {
+      row += "*";
+    }
+
+    // Spaces
+    for (int j = 0; j < (2 * 5) - (2 * i + 2); j++) {
+      row += " ";
+    }
+
+    // Right stars
+    for (int j = 0; j < i + 1; j++) {
+      row += "*";
+    }
+
+    print(row);
+  }
+
   // ===========================================================================
   // 2. for-in Loop
   //
@@ -40,7 +86,7 @@ void main() {
     "Jupiter",
     "Saturn",
     "Uranus",
-    "Neptune"
+    "Neptune",
   ];
 
   for (String planet in solarSystem) {
@@ -102,5 +148,4 @@ void main() {
 
     print(l);
   }
-
 }
