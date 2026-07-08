@@ -1,7 +1,7 @@
 void main() {
   // Creating Student objects
-  var student1 = Student();
-  var student2 = Student();
+  Student student1 = Student();
+  Student student2 = Student();
 
   // Assigning values to student1
   student1.name = "Garv Verma";
