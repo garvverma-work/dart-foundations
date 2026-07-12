@@ -34,29 +34,19 @@ void main() {
 // Higher Order Function: accepts another function as parameter
 // ---------------------------------------------------------------------------
 
-num calc(int a, int b, num Function(int, int) myFunc) {
-  return myFunc(a, b);
-}
+num calc(int a, int b, num Function(int, int) myFunc) => myFunc(a, b);
 
 // ---------------------------------------------------------------------------
 // Basic arithmetic functions (used as callbacks)
 // ---------------------------------------------------------------------------
 
-num add(int a, int b) {
-  return a + b;
-}
+num add(int a, int b) => a + b;
 
-num sub(int a, int b) {
-  return a - b;
-}
+num sub(int a, int b) => a - b;
 
-num multiply(int a, int b) {
-  return a * b;
-}
+num multiply(int a, int b) => a * b;
 
-num divide(int a, int b) {
-  return a / b;
-}
+num divide(int a, int b) => a / b;
 
 // ---------------------------------------------------------------------------
 // Higher Order Function: returns another function
