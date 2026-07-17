@@ -1,55 +1,59 @@
 
 void main() {
-  // Non-nullable variable
-  // This variable must always contain a value.
-  String name = "Garv";
+  // --------------------------------------------------
+  // String to int
+  // int.parse() converts a String into an integer.
+  String age = "21";
 
-  print("Name: $name");
+  int convertedAge = int.parse(age);
+
+  print("Age: $convertedAge");
+  print("Age + 1: ${convertedAge + 1}");
 
   // --------------------------------------------------
+  // String to double
+  // double.parse() converts a String into a double.
+  String price = "99.99";
 
-  // Nullable variable
-  // The '?' means this variable can store null.
-  String? nickname;
+  double convertedPrice = double.parse(price);
 
-  print("Nickname: $nickname"); // Output: null
-
-  // Assigning a value later
-  nickname = "Garry";
-
-  print("Updated Nickname: $nickname");
+  print("\nPrice: $convertedPrice");
 
   // --------------------------------------------------
+  // int to String
+  // toString() converts any value into a String.
+  int rollNumber = 101;
 
-  // Null Coalescing Operator (??)
-  // If the value is null, a default value is used.
-  String? city;
+  String convertedRollNumber = rollNumber.toString();
 
-  print("City: ${city ?? "Unknown"}");
-
-  // --------------------------------------------------
-
-  // Null Aware Operator (?.)
-  // Calls a property or method only if the object is not null.
-  String? country;
-
-  print("Country Length: ${country?.length}");
+  print("\nRoll Number: $convertedRollNumber");
 
   // --------------------------------------------------
+  // double to int
+  // toInt() removes the decimal part.
+  double marks = 95.75;
 
-  // Null Assertion Operator (!)
-  // Tells Dart that "I am sure this value is not null."
-  // Be careful! If the value is actually null, the program crashes.
+  int convertedMarks = marks.toInt();
 
-  String? college = "ABC University";
-
-  print("College Name Length: ${college!.length}");
+  print("\nMarks: $convertedMarks");
 
   // --------------------------------------------------
+  // Object Typecasting using 'as'
 
-  // This would cause an error because 'name' cannot be null.
-  // name = null;
+  Animal animal = Dog();
 
-  // This would crash the program because 'country' is null.
-  // print(country!.length);
+  // Converting Animal reference to Dog.
+  Dog dog = animal as Dog;
+
+  dog.bark();
+}
+
+// Parent Class
+class Animal {}
+
+// Child Class
+class Dog extends Animal {
+  void bark() {
+    print("\nDog is Barking!");
+  }
 }
